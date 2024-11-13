@@ -8,6 +8,8 @@ set cindent
 
 set mouse=a
 
+set clipboard=unnamedplus
+
 " reduce latency
 set ttimeoutlen=1
 
