@@ -47,3 +47,7 @@ bindkey -v
 
 # escape key latency
 # KEYTIMEOUT=5
+
+alias francinette=/home/juportie/francinette/tester.sh
+
+alias paco=/home/juportie/francinette/tester.sh
