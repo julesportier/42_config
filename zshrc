@@ -1,19 +1,41 @@
-# Set up the prompt
+##########
+# PROMPT #
+##########
+# Set up the prompt with static repo infos
+autoload -Uz vcs_info # enable vcs_info
+zstyle ':vcs_info:*' enable git # to just enable git backend ($ vcs_info_printsys)
+zstyle ':vcs_info:git*' formats '[%r(%b)]' # format vcs_info output
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+setopt prompt_subst
 
+precmd () { # always load before displaying the prompt
+
+	vcs_info; # set vcs_info_msg_0_
+
+	# if in repo add a new line in the prompt for bettter readability
+	if [[ -n $vcs_info_msg_0_ ]]; then
+
+		PS1='%F{green}%n@%m%f:%F{blue}%~%f$vcs_info_msg_0_
+$ '
+	else
+		PS1='%F{green}%n@%m%f:%F{blue}%~%f$vcs_info_msg_0_$ '
+	fi
+
+}
+
+###########
+# HISTORY #
+###########
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+##############
+# COMPLETION #
+##############
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -36,18 +58,23 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# custum additions :
+###############
+# INTERACTION #
+###############
+# Use vi keybindings
+bindkey -v
+# Set escape key latency
+# KEYTIMEOUT=5
+
+###########
+# ALIASES #
+###########
 # output color
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
+alias ll='ls -l --color=auto'
+alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
-
-# vi mode
-bindkey -v
-
-# escape key latency
-# KEYTIMEOUT=5
-
+# scripts
 alias francinette=/home/juportie/francinette/tester.sh
-
 alias paco=/home/juportie/francinette/tester.sh
