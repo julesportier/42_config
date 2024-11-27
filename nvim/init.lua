@@ -46,6 +46,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- PLUGINS --
 -------------
 require("config.lazy")
+-- set colorsheme after config
+vim.cmd.colorscheme "catppuccin"
 
 ---------------------
 -- PLUGINS KEYMAPS --
