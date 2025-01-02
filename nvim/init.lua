@@ -15,6 +15,10 @@ vim.opt.cursorlineopt = "number"
 -- Always keep 5 lines below and above the cursor
 vim.opt.scrolloff = 5
 
+-- Create splits to the right and below
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 vim.opt.breakindent = true
 vim.opt.showbreak = '++> '
 -- Show non printable chars
