@@ -12,8 +12,8 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
--- Always keep 10 lines below and above the cursor
-vim.opt.scrolloff = 10
+-- Always keep 5 lines below and above the cursor
+vim.opt.scrolloff = 5
 
 vim.opt.breakindent = true
 vim.opt.showbreak = '++> '
