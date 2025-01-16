@@ -15,9 +15,9 @@ vim.opt.splitbelow = true
 
 vim.opt.breakindent = true
 vim.opt.showbreak = '++> '
--- Set tabulation length to 4
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+-- Set tabulation length to 4 !! induce autoindent bugs
+--vim.opt.tabstop = 4
+--vim.opt.shiftwidth = 4
 -- Show non printable chars
 --vim.opt.list = true
 
