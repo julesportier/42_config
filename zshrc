@@ -78,6 +78,7 @@ alias la='ls -a --color=auto'
 alias ll='ls -l --color=auto'
 alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
+export MANPAGER='less -R --use-color -Dd+g -Du+y'
 # 42 default's cc flags
 alias ccw='cc -Wall -Wextra -Werror'
 # scripts
