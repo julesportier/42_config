@@ -14,7 +14,6 @@ precmd () { # always load before displaying the prompt
 
 	# if in repo add a new line in the prompt for bettter readability
 	if [[ -n $vcs_info_msg_0_ ]]; then
-
 		PS1='%F{green}%B%n@%m%f:%F{blue}%~%b%f$vcs_info_msg_0_
 $ '
 	else
@@ -78,6 +77,7 @@ alias la='ls -a --color=auto'
 alias ll='ls -l --color=auto'
 alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
+alias diff='diff --color=auto'
 export MANPAGER='less -R --use-color -Dd+g -Du+y'
 # 42 default's cc flags
 alias ccw='cc -Wall -Wextra -Werror'
