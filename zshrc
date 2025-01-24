@@ -63,8 +63,8 @@ setopt extended_glob
 ###############
 # INTERACTION #
 ###############
-# Use vi keybindings
-bindkey -v
+# Use emacs keybindings
+bindkey -e
 # Set escape key latency
 # KEYTIMEOUT=5
 
