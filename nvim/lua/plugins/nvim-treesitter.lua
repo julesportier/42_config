@@ -10,7 +10,8 @@ return {
 				"gitcommit", "gitignore", "git_config", "git_rebase", "diff",
 				"c", "make",
 				"bash",
-				"markdown", "markdown_inline"
+				"markdown", "markdown_inline",
+				"tmux"
 			},
 			auto_install = true,
 			sync_install = false,
