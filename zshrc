@@ -81,6 +81,12 @@ alias diff='diff --color=auto'
 export MANPAGER='less -R --use-color -Dd+g -Du+y'
 # 42 default's cc flags
 alias ccw='cc -Wall -Wextra -Werror'
+# 42 minilibx
+MLXDIR='/home/juportie/Documents/minilibx'
+manmlx() {
+	man "$MLXDIR/man/man3/$1.3" 2>/dev/null \
+	|| ls "$MLXDIR/man/man3/" | tr -d .3
+}
 # scripts
 alias francinette=/home/juportie/francinette/tester.sh
 alias paco=/home/juportie/francinette/tester.sh
