@@ -54,6 +54,13 @@ require("config.lazy")
 -- set colorsheme after config
 vim.cmd.colorscheme "catppuccin"
 
+
+----------------
+-- LSP CONFIG --
+----------------
+require('lspconfig').clangd.setup{}
+
+
 ---------------------
 -- PLUGINS KEYMAPS --
 ---------------------
