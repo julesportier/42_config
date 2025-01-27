@@ -58,7 +58,6 @@ vim.cmd.colorscheme "catppuccin"
 ----------------
 -- LSP CONFIG --
 ----------------
-require('lspconfig').clangd.setup{}
 
 
 ---------------------

@@ -6,7 +6,12 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "clangd" }
+			ensure_installed = { "clangd" },
+			handlers = {
+				function(clangd)
+					require('lspconfig').clangd.setup{}
+				end,
+			}
 		}
 	},
 	{
