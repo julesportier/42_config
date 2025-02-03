@@ -1,3 +1,12 @@
+# :::::::::::::::::::
+# ::: Color Theme :::
+# :::::::::::::::::::
+# alacritty's themes repos :
+# https://github.com/alacritty/alacritty-theme
+import = [
+	'~/Documents/42_config/alacritty/themes/enfocado_light.toml'
+	#'~/Documents/42_config/alacritty/themes/enfocado_dark.toml'
+]
 
 # ::::::::::::::::::::::
 # ::: Graphic config :::
@@ -13,14 +22,3 @@ size = 16
 
 [cursor]
 vi_mode_style = { shape = 'Underline', blinking = 'Always' }
-
-# :::::::::::::::::::
-# ::: Color Theme :::
-# :::::::::::::::::::
-# alacritty's themes repos :
-# https://github.com/alacritty/alacritty-theme
-[general]
-import = [
-	'~/Documents/42_config/alacritty/themes/enfocado_light.toml'
-	#'~/Documents/42_config/alacritty/themes/enfocado_dark.toml'
-]
