@@ -74,10 +74,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', 'gri', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
 		vim.keymap.set('n', 'gO', '<cmd>lua vim.lsp.buf.document_symbol()<cr>', opts)
 		vim.keymap.set('i', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+		vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
+		vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
+		vim.keymap.set('n', '<C-w>d', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
+		-- 'i', '<C-x><C-o>' : 'omnifunc' completion
 		--------------------------
-		vim.keymap.set('n', 'grD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-		vim.keymap.set('n', 'gro', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-		vim.keymap.set('n', 'grs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+		vim.keymap.set('n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+		-- vim.keymap.set('n', 'gro', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+		-- vim.keymap.set('n', 'grD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
 	end,
 })
 
