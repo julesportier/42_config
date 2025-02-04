@@ -4,7 +4,7 @@
 # Set up the prompt with static repo infos
 autoload -Uz vcs_info # enable vcs_info
 zstyle ':vcs_info:*' enable git # to just enable git backend ($ vcs_info_printsys)
-zstyle ':vcs_info:git*' formats '[%r(%b)]' # format vcs_info output
+zstyle ':vcs_info:git*' formats '[ %r(%b)]' # format vcs_info output
 
 setopt prompt_subst
 
