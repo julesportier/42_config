@@ -59,6 +59,9 @@ vim.cmd.colorscheme "catppuccin"
 -- LSP CONFIG --
 ----------------
 vim.opt.signcolumn = 'yes'
+vim.diagnostic.config({
+	virtual_text = false
+})
 vim.api.nvim_create_autocmd('LspAttach', {
 	desc = 'LSP actions',
 	callback = function(event)
@@ -79,6 +82,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<C-w>d', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
 		-- 'i', '<C-x><C-o>' : 'omnifunc' completion
 		--------------------------
+		vim.keymap.set('n', '<C-k>', function()
+			local new_config = not vim.diagnostic.config().virtual_text
+			vim.diagnostic.config({ virtual_text = new_config })
+		end, { desc = 'Toggle diagnostic virtual_text' })
 		vim.keymap.set('n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
 		-- vim.keymap.set('n', 'gro', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 		-- vim.keymap.set('n', 'grD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
