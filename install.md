@@ -6,11 +6,24 @@ cmake -DENABLE_UNIT_TESTS=OFF -DENABLE_FUNC_TESTS=OFF -D -DCMAKE_INSTALL_PREFIX:
 make all
 make install
 ```
+## install prebuild wezterm package
+``` sh
+dpkg -x wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb $HOME/.local/share/wezterm
+```
+## install nvim appimage
+`chmod u+x nvim-linux-x86_64.appimage && ./nvim-linux-x86_64.appimage`
+- if not working with FUSE at school, unpack the file:
+``` sh
+./nvim-linux-x86_64.appimage --appimage-extract
+./squashfs-root/usr/bin/nvim
+```
 
 ## add conpiled programs to PATH
 - check that ~/bin is in PATH
-sources/ is arbitrary
+`~/sources/` or `~/bin/` or `~/.local/share` are arbitrary
 ``` sh
 ln -s ~/bin/bin/bear ~/bin/bear
 ln -s ~/sources/alacritty/target/release/alacritty ~/bin/alacritty
+ln -s ~/.local/share/wezterm/usr/bin/wezterm ~/bin/wezterm
+ln -s ~/bin/squashfs-root/usr/bin/nvim ~/bin/nvim
 ```
