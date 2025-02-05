@@ -42,6 +42,7 @@ config.tab_bar_at_bottom = true
 -------------------
 
 config.keys = {
+	-- Pane switching
 	{
 		key = 'h', mods = 'ALT',
 		action = act.ActivatePaneDirection 'Left',
@@ -58,6 +59,12 @@ config.keys = {
 		key = 'j', mods = 'ALT',
 		action = act.ActivatePaneDirection 'Down',
 	},
+	-- Pane resizing
+	{ key = 'h', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Left', 3 } },
+	{ key = 'l', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Right', 3 } },
+	{ key = 'k', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Up', 3 } },
+	{ key = 'j', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Down', 3 } },
+	-- tab switching
 	{ key = 'h', mods = 'SHIFT|ALT', action = act.ActivateTabRelative(-1) },
 	{ key = 'l', mods = 'SHIFT|ALT', action = act.ActivateTabRelative(1) },
 }
