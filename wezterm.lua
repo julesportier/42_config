@@ -53,7 +53,6 @@ config.inactive_pane_hsb = {
 -------------------
 --- Keybindings ---
 -------------------
-
 config.keys = {
 	-- Pane switching
 	{
@@ -71,6 +70,21 @@ config.keys = {
 	{
 		key = 'j', mods = 'ALT',
 		action = act.ActivatePaneDirection 'Down',
+	},
+	-- Pane switching with auto zoom on selected pane
+	{
+		key = 'k', mods = 'ALT|SHIFT',
+		action = act.Multiple{
+			act.ActivatePaneDirection 'Up',
+			act.SetPaneZoomState(true),
+		},
+	},
+	{
+		key = 'j', mods = 'ALT|SHIFT',
+		action = act.Multiple{
+			act.ActivatePaneDirection 'Down',
+			act.SetPaneZoomState(true),
+		},
 	},
 	-- Pane resizing
 	{ key = 'h', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Left', 3 } },
