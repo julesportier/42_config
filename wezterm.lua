@@ -37,6 +37,14 @@ config.font_size = 15
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
+-----------------------------
+--- Inactive pane dimming ---
+-----------------------------
+config.inactive_pane_hsb = {
+	saturation = 1,
+	brightness = 0.95,
+}
+
 -------------------
 --- Keybindings ---
 -------------------
