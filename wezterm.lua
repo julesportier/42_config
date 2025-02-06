@@ -91,9 +91,11 @@ config.keys = {
 	{ key = 'l', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Right', 3 } },
 	{ key = 'k', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Up', 3 } },
 	{ key = 'j', mods = 'CTRL|SHIFT|ALT', action = act.AdjustPaneSize { 'Down', 3 } },
-	-- tab switching
+	-- Tab switching
 	{ key = 'h', mods = 'SHIFT|ALT', action = act.ActivateTabRelative(-1) },
 	{ key = 'l', mods = 'SHIFT|ALT', action = act.ActivateTabRelative(1) },
+	-- New tab
+	{ key = 'c', mods = 'SHIFT|ALT', action = act.SpawnTab 'CurrentPaneDomain' },
 }
 
 return config
