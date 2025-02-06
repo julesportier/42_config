@@ -37,6 +37,11 @@ config.font_size = 15
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
+--------------------------
+--- Window decorations ---
+--------------------------
+config.window_decorations = "RESIZE"
+
 -----------------------------
 --- Inactive pane dimming ---
 -----------------------------
