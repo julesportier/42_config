@@ -29,7 +29,17 @@ end)
 -------------
 --- Fonts ---
 -------------
-config.font_size = 15
+config.font_size = 16
+--config.font = wezterm.font 'Fira Code'
+---- Firacode variants
+--config.harfbuzz_features = {
+--	-- alpha
+--	'cv01', 'cv02', 'ss01',
+--	-- special
+--	'ss05', 'ss03', 'cv31', 'cv29', 'cv30',
+--	-- ligatures
+--	'ss02',
+--}
 
 ---------------
 --- Tab bar ---
