@@ -45,6 +45,8 @@ vim.g.maplocalleader = ' '
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- To access man pages in lsp buffers
+vim.keymap.set('n', '<C-k>', '<cmd>Man "expand("<cWORD>")"<CR>')
 
 
 -------------
