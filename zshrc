@@ -79,6 +79,7 @@ alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 export MANPAGER='less -R --use-color -Dd+g -Du+y'
+alias van='man --pager="nvim +Man!"'
 # 42 default's cc flags
 alias ccw='cc -Wall -Wextra -Werror'
 # 42 minilibx
