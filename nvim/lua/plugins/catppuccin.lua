@@ -8,7 +8,7 @@ return {
 		-- 	light = "latte",
 		-- 	dark = "mocha",
 		-- },
-		-- transparent_background = false,
+		transparent_background = true,
 		styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
 			-- comments = { "italic" },
 			-- conditionals = { "italic" },
