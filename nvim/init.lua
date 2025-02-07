@@ -84,7 +84,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<C-w>d', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
 		-- 'i', '<C-x><C-o>' : 'omnifunc' completion
 		--------------------------
-		vim.keymap.set('n', '<C-k>', function()
+		vim.keymap.set('n', '<C-w><S-d>', function()
 			local new_config = not vim.diagnostic.config().virtual_text
 			vim.diagnostic.config({ virtual_text = new_config })
 		end, { desc = 'Toggle diagnostic virtual_text' })
