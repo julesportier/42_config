@@ -47,10 +47,16 @@ config.font_size = 16
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
---------------------------
---- Window decorations ---
---------------------------
+--------------
+--- Window ---
+--------------
 config.window_decorations = "RESIZE"
+config.window_padding = {
+	left = 3,
+	right = 3,
+	top = 3,
+	bottom = 3,
+}
 
 -----------------------------
 --- Inactive pane dimming ---
