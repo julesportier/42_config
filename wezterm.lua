@@ -78,22 +78,10 @@ config.inactive_pane_hsb = {
 -------------------
 config.keys = {
 	-- Pane switching
-	{
-		key = 'h', mods = 'ALT',
-		action = act.ActivatePaneDirection 'Left',
-	},
-	{
-		key = 'l', mods = 'ALT',
-		action = act.ActivatePaneDirection 'Right',
-	},
-	{
-		key = 'k', mods = 'ALT',
-		action = act.ActivatePaneDirection 'Up',
-	},
-	{
-		key = 'j', mods = 'ALT',
-		action = act.ActivatePaneDirection 'Down',
-	},
+	{ key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
+	{ key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+	{ key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
+	{ key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
 	-- Pane switching with auto zoom on selected pane
 	{
 		key = 'k', mods = 'ALT|SHIFT',
