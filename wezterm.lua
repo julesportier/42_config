@@ -2,12 +2,19 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 local act = wezterm.action
 
-------------------------------
---- System theme following ---
-------------------------------
-local light_theme = 'Ef-Deuteranopia-Light'
+-------------------
+--- Colorscheme ---
+-------------------
+-- Override default Ef_Deuteranopia_Light colorscheme background to be whiter
+local Ef_Deuteranopia_Light_Custom = wezterm.color.get_builtin_schemes()['Ef-Deuteranopia-Light']
+Ef_Deuteranopia_Light_Custom.background = '#f9f9ff'
+config.color_schemes = {
+	['Ef-Deuteranopia-Light-Custom'] = Ef_Deuteranopia_Light_Custom,
+}
+local light_theme = 'Ef-Deuteranopia-Light-Custom'
 local dark_theme = 'Ef-Deuteranopia-Dark'
 
+--- System theme following ---
 function scheme_for_appearance(appearance)
 	if appearance:find 'Dark' then
 		return dark_theme
