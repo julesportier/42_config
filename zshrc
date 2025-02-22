@@ -80,14 +80,35 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 export MANPAGER='less -R --use-color -Dd+g -Du+y'
 alias van='man --pager="nvim +Man!"'
-# 42 default's cc flags
+
+# git aliases
+# 	status
+alias gs='git status --short'
+alias gst='git status'
+alias gsv='git status --untracked-files=all -vv'
+#	log & diff
+alias gl='git log --oneline'
+alias glo='git log'
+alias glp='git log --patch'
+alias gd='git diff'
+#	branches
+alias gbs='git switch'
+alias gb='git switch -c'
+alias gbv='git branch -vv'
+#	add & commit
+alias ga='git add'
+alias gap='git add --patch'
+alias gc='git commit -v'
+
+# 42
+#	default's cc flags
 alias ccw='cc -Wall -Wextra -Werror'
-# 42 minilibx
+#	minilibx
 MLXDIR='/home/juportie/Documents/minilibx'
 manmlx() {
 	man "$MLXDIR/man/man3/$1.3" 2>/dev/null \
 	|| ls "$MLXDIR/man/man3/" | tr -d .3
 }
-# scripts
+#	scripts
 alias francinette=/home/juportie/francinette/tester.sh
 alias paco=/home/juportie/francinette/tester.sh
