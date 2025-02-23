@@ -27,8 +27,8 @@
 `^`, go to first non blank character
 `$`, go to line end
 `w`, go to next word
-`b`, go to word beginning 
-`e`, go to word end 
+`b`, go to word beginning
+`e`, go to word end
 `3w`, go three words next
 `%`, go to matching parenthesis
 `t"char"`(reverse `T`), until char (go to character before)
