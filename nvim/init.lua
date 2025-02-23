@@ -50,8 +50,6 @@ vim.g.maplocalleader = ' '
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
--- To access man pages in lsp buffers
-vim.keymap.set('n', '<C-k>', '<cmd>Man "expand("<cWORD>")"<CR>')
 
 
 -------------
@@ -77,7 +75,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		-- Defaults keybindings --
 		vim.keymap.set('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
 		vim.keymap.set({'n', 'x'}, 'gq', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-		vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+		-- vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
 		vim.keymap.set('n', 'grn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 		vim.keymap.set('n', 'gra', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 		vim.keymap.set('n', 'grr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
@@ -89,6 +87,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<C-w>d', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
 		-- 'i', '<C-x><C-o>' : 'omnifunc' completion
 		--------------------------
+		-- Restore K for Man.
+		vim.keymap.del('n', '<S-k>', opts)
+		-- Set <C-k> for hover infos.
+		vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
 		vim.keymap.set('n', '<C-w><S-d>', function()
 			local new_config = not vim.diagnostic.config().virtual_text
 			vim.diagnostic.config({ virtual_text = new_config })
