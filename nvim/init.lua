@@ -21,7 +21,12 @@ vim.opt.showbreak = '󰘍 '
 -- Show non printable chars
 --vim.opt.list = true
 
--- Save undo history
+-- Make completion happens progressively and
+-- show additional info if relevant.
+--  See :help 'completeopt'
+vim.opt.completeopt = {'menu', 'popup', 'longest'}
+
+-- Save undo history.
 vim.opt.undofile = true
 -- Decrease swap file update time (when nothing is typed)
 vim.opt.updatetime = 500
