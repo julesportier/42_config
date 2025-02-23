@@ -1,21 +1,24 @@
 # VIM CHEATSHEET
 
-### Modes
+
+
+## Modes
+
 `esc` or `<C-c>`, return to normal mode
 `v`, visual mode (text selection)
 `V`, visual line mode
 `<C-v>`, visual block mode
 `R`, replace mode (permits to move line too)
-
-### Insert
+### Normal to Insert
 `i`, insert before cursor
 `I`, insert to line start
 `a`, insert after cursor
 `A`, append to line end
 `o`, insert on a newline below (`O` above)
-`<C+k "digraph-code"`, in insert mode insert digraph (:h digraph)
 
-### Motion
+
+## Motions
+
 `<C-g>`, show position in the file
 `gg`, go to file beginning
 `G`, go to file end
@@ -30,21 +33,25 @@
 `%`, go to matching parenthesis
 `t"char"`(reverse `T`), until char (go to character before)
 `f"char"`(reverse `F`), find char
-#### Jumps
+
+### Jumps
 `<C-o>`, go to precedent cursor position (`<C-i>`, next)
 Needs a tag file index creation command like universal ctags
 `<C-]>`, jump to next tag
 `<C-t>`, go back to precedent tag
-#### Cursor
+
+### Cursor
 `<C-d>`, move the cursor downward half a screen
 `<C-u>`, move the cursor upward half a screen
 `<C-e>`, move the screen downward one line
 `zt`, bring the current line near the top of the screen (`zz`, middle, `zb`, bottom)
-#### Folds
+
+### Folds
 `zf{motion}`, create fold
 `za`, toggle fold (`zA` recursively)
 
-### Change text
+
+## Change text
 `x`, "suppr"
 `X`, "backspace"
 `r`, replace character
@@ -60,14 +67,17 @@ Needs a tag file index creation command like universal ctags
 `"+<operator>`, access system clipboard
 `p`, put (paste) (whole lines go on the line below the cursor, P before)
 `:r <filename or command>`, read/retrieve file content below cursor
-`U`, change selection to upper case (u, lower case. gU<motion> in normal mode)
+`U`, change selection to upper case (u, lower case. `gU<motion>` in normal mode)
+`<C+k "digraph-code"`, in insert mode insert digraph (:h digraph)
 `:'<,'>norm(al)`, apply normal command on selection
-#### Macros
+`gc{motion | c}`, comment toggle
+### Macros
 `q{key}`, record macro
 `[n]@{key}`, execute macro n times
 macros can be executed on multiple lines in visual mode
 
-### Search-commands
+
+## Search-commands
 `f (reverse F)`, find character in line
 `* (reverse #)`, select word under cursor, find next occurence
 `/word[\option](? backward)`, search word
@@ -76,14 +86,35 @@ macros can be executed on multiple lines in visual mode
 `:%s/old\(.\)/new\1new`, capture group to reput the old char (numbers of `.`) in new
 `n`, next word
 `N`, previous word
+`<C-l>`, clear higlighted text
+
+
+## Get infos
+
+### Completion/help
+`"command beggining" <C-d>`, show list of commands
+`tab`, completion
+`K`, open the man on the word
+`:help user-manual`, a lot of things here
+`gO`, show 'document symbol' e.g. table of content
+`<C-n>`, trigger buffer context completion
+`<C-x><C-o>`, trigger omnifunc completion (or lsp)
+
+### Characters
+`ga`, print ascii value of the char under the cursor
 
 
 ## Multiple files edition
 
-### Windows
-`<C-w> w`, change window
-`<C-w> hjkl`, switch to window
-`<C-w> o`, close all windows but current
+### Splits
+`<C-w> w`, change split
+`<C-w> hjkl`, switch to split
+`<C-w> o`, close all splits but current
+`<C-w> {nbr}[+-]`, vertically resize split
+`<C-w> _`, vertically maximize
+`<C-w> {nbr}[><]`, horizontally resize split
+`<C-w> |`, horizontally maximize
+`<C-w> =`, all splits at same size
 
 ### Tabs
 `:tabnew` or `:tabe`
@@ -95,6 +126,7 @@ macros can be executed on multiple lines in visual mode
 `:ls`, list buffers
 `:b 1`, switch to buffer 1 (`sb` as a split)
 `:bd 1`, close buffer 1
+`:bn`, next buffer (`bp` previous)
 
 ### Netrw (file explorer)
 `:Ex`, open file explorer
@@ -119,12 +151,6 @@ macros can be executed on multiple lines in visual mode
 `u`, undo
 `U`, restore whole line
 `<C-r>`, redo
-`"command beggining" <C-d>`, show list of commands
-`tab`, completion
-`<C-l>`, clear higlighted text
-
-`K`, open the man on the word
-`:help user-manual`, a lot of things here
 
 `:set [no(disable)][inv(invert)]<options>[?(return option value)]`, set option (ic, ignore case; hl, highlight; ic, inner sentence counter...)
 
@@ -132,6 +158,6 @@ macros can be executed on multiple lines in visual mode
 `:term(inal)`, open terminal
 `<C-\><C-n>`, return to normal mode
 `<C-d>`, exit and close terminal window
-`packadd termdebug`, load the debug plugin
+`:packadd termdebug`, load the debug plugin
 `:Termdebug a.out`, open gdb for a.out executable in nvim
 `:B(reak)`, add breakpoints on source window
