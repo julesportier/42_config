@@ -6,10 +6,10 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
--- Always keep 5 lines below and above the cursor
+-- Always keep 5 lines below and above the cursor.
 vim.opt.scrolloff = 5
 
--- Create splits to the right and below
+-- Create splits to the right and below.
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
@@ -28,7 +28,7 @@ vim.opt.completeopt = {'menu', 'popup', 'longest'}
 
 -- Save undo history.
 vim.opt.undofile = true
--- Decrease swap file update time (when nothing is typed)
+-- Decrease swap file update time (when nothing is typed).
 vim.opt.updatetime = 500
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -41,13 +41,13 @@ end)
 --------------------
 -- CUSTOM KEYMAPS --
 --------------------
--- Set <space> as the leader key
+-- Set <space> as the leader key.
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Clear highlights on search when pressing <Esc> in normal mode
+-- Clear highlights on search when pressing <Esc> in normal mode.
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -56,7 +56,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- PLUGINS --
 -------------
 require("config.lazy")
--- set colorsheme after config
+-- Should set colorsheme after config.
 vim.cmd.colorscheme "catppuccin"
 
 
@@ -91,23 +91,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.del('n', '<S-k>', opts)
 		-- Set <C-k> for hover infos.
 		vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+		-- Toggle virtual text.
 		vim.keymap.set('n', '<C-w><S-d>', function()
 			local new_config = not vim.diagnostic.config().virtual_text
 			vim.diagnostic.config({ virtual_text = new_config })
 		end, { desc = 'Toggle diagnostic virtual_text' })
+		-- Add buf signature help in normal mode.
 		vim.keymap.set('n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
 		-- vim.keymap.set('n', 'gro', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 		-- vim.keymap.set('n', 'grD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
 	end,
 })
-
-
----------------------
--- PLUGINS KEYMAPS --
----------------------
--- Telescope bindings
---local builtin = require('telescope.builtin')
---vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
---vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
---vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
---vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
