@@ -15,9 +15,9 @@ precmd () { # always load before displaying the prompt
 	# if in repo add a new line in the prompt for bettter readability
 	if [[ -n $vcs_info_msg_0_ ]]; then
 		PS1='%F{green}%B%n@%m%f:%F{blue}%~%b%f$vcs_info_msg_0_
-$ '
+%% '
 	else
-		PS1='%F{green}%B%n@%m%f:%F{blue}%~%b%f$ '
+		PS1='%F{green}%B%n@%m%f:%F{blue}%~%b%f%% '
 	fi
 
 }
