@@ -1,0 +1,36 @@
+[global_config]
+  tab_position = bottom
+[keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  split_horiz = <Primary><Alt>quotedbl
+  split_vert = <Primary><Alt>percent
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
+  next_tab = <Shift><Alt>l
+  prev_tab = <Shift><Alt>h
+  layout_launcher = <Primary><Shift><Alt>l
+[profiles]
+  [[default]]
+    background_color = "#ffffff"
+    cursor_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font Mono 14
+    foreground_color = "#000000"
+    show_titlebar = False
+    scrollback_lines = 5000
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+    use_theme_colors = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
