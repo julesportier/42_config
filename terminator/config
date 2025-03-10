@@ -7,6 +7,10 @@
   go_right = <Alt>l
   split_horiz = <Primary><Alt>quotedbl
   split_vert = <Primary><Alt>percent
+  page_up = <Shift><Alt>u
+  page_down = <Shift><Alt>d
+  page_up_half = <Alt>u
+  page_down_half = <Alt>d
   resize_up = <Primary><Shift>k
   resize_down = <Primary><Shift>j
   resize_left = <Primary><Shift>h
@@ -14,6 +18,7 @@
   next_tab = <Shift><Alt>l
   prev_tab = <Shift><Alt>h
   layout_launcher = <Primary><Shift><Alt>l
+  help = F4
 [profiles]
   [[default]]
     background_color = "#ffffff"
