@@ -58,6 +58,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 require("config.lazy")
 -- Should set colorsheme after config.
 vim.cmd.colorscheme "catppuccin"
+require("keymaps.scnvim")
 
 
 ----------------
