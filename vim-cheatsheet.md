@@ -139,6 +139,12 @@ macros can be executed on multiple lines in visual mode
 `R`, rename
 `D`, delete file/dir
 
+### Quickfix list
+`:cl`, show list (`esc` to close)
+`:cope[n]`, open list in a buffer
+when in list buffer: `<C-w><CR>` to jump to the error on a new window
+`grep {string} [files(eg *.c)]`, load grep results to list
+`cdo {cmd}`, execute a command on each quickfix elements (one by one -> confirmation...)
 
 ## Basic editing commands
 `:w [filename or command]`, save (in Visual mode after pressing : it it's possible to save only the selected text on a file)
