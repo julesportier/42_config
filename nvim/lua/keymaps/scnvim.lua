@@ -8,9 +8,6 @@ local postwin = require('scnvim.postwin')
 local function sclang_send(cmd)
 	require('scnvim.sclang').send(cmd)
 end
-local function editor_send(cmd)
-	require('scnvim.sclang').send(cmd)
-end
 
 ---------------------
 -- SCNvim commands --
@@ -27,7 +24,7 @@ map('n', '<leader>s<CR>', postwin.toggle, {desc = 'SCNvim postwin toggle'})
 -- Server --
 ------------
 map(
-	'n', '<M-f>',
+	{'n', 'i'}, '<M-f>',
 	function() sclang_send('TempoClock.cmdPeriod; s.freeAll;') end,
 	{desc = 'Supercollider freeAll & free TempoClock'}
 )
@@ -37,18 +34,18 @@ map('n', '<M-q>', function() sclang_send('s.quit') end, {desc = 's.quit'})
 -- Send code --
 ---------------
 map(
-	'n', '<M-e>',
-	function() editor_send.send_line() end,
+	{'n', 'i'}, '<M-e>',
+	function() require('scnvim.editor').send_line() end,
 	{desc = 'Supercollider send_line'}
 )
 map(
-	'n', '<C-e>', 
-	function() editor_send.send_block() end,
+	{'n', 'i'}, '<C-e>', 
+	function() require('scnvim.editor').send_block() end,
 	{desc = 'Supercollider send_block'}
 )
 map(
 	'x', '<C-e>', 
-	function() editor_send.send_selection() end,
+	function() require('scnvim.editor').send_selection() end,
 	{desc = 'Supercollider send_selection'}
 )
 --['<M-l>'] = scnvim.map('postwin.clear', {'n', 'i'}),
