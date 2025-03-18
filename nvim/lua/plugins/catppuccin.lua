@@ -79,7 +79,8 @@ return {
 				sky = "#0382b5",
 				sapphire = "#187a8b",
 				blue = "#0a4ed6",
-				lavender = "#5d72ea", -- S-20,L-8
+				--lavender = "#5d72ea", -- S-20,L-8
+				lavender = "#4340fc", -- H+10,L-10
 				text = "#36384a",
 				subtext1 = "#454759",
 				subtext0 = "#555768",
