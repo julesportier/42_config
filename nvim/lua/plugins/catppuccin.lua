@@ -55,11 +55,13 @@ return {
 				crust = "#0e0f16",
 			},
 			-- latte = { --more contrast
+			--	-- mauve = "#6d12e2", -- L+10
 			-- 	text = "#3c3e52",
 			-- 	peach = "#f45a01",
 			-- 	green = "#3a9127",
 			-- 	blue = "#0b59f4",
 			-- 	lavender = "#5f77fa",
+			--	base = "#f6f7f9", -- L+2
 			-- 	--base = "#ffffff", --background
 			-- 	--mantle = "#ffffff", --status bar
 			-- 	--crust = "#ffffff",
@@ -73,7 +75,8 @@ return {
 				red = "#a20b2c",
 				maroon = "#dc1e2e",
 				peach = "#d54f01",
-				yellow = "#b07017",
+				-- yellow = "#b07017",
+				yellow = "#ba630d", -- H-5,S+10,L-10
 				green = "#307920",
 				teal = "#179299",
 				sky = "#0382b5",
