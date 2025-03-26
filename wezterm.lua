@@ -36,7 +36,8 @@ end)
 -------------
 --- Fonts ---
 -------------
-config.font_size = 16
+config.font = wezterm.font('JetBrains Mono', { weight = 'DemiBold' })
+config.font_size = 15
 --config.font = wezterm.font 'Fira Code'
 ---- Firacode variants
 --config.harfbuzz_features = {
