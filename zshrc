@@ -117,6 +117,3 @@ manmlx() {
 	man "$MLXDIR/man/man3/$1.3" 2>/dev/null \
 	|| ls "$MLXDIR/man/man3/" | tr -d .3
 }
-#	scripts
-alias francinette=/home/juportie/francinette/tester.sh
-alias paco=/home/juportie/francinette/tester.sh
