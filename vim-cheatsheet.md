@@ -1,15 +1,11 @@
-# VIM CHEATSHEET
-
-
-
-## Modes
+# Modes
 
 `esc` or `<C-c>`, return to normal mode
 `v`, visual mode (text selection)
 `V`, visual line mode
 `<C-v>`, visual block mode
 `R`, replace mode (permits to move line too)
-### Normal to Insert
+## Normal to Insert
 `i`, insert before cursor
 `I`, insert to line start
 `a`, insert after cursor
@@ -17,7 +13,7 @@
 `o`, insert on a newline below (`O` above)
 
 
-## Motions
+# Motions
 
 `<C-g>`, show position in the file
 `gg`, go to file beginning
@@ -34,24 +30,24 @@
 `t"char"`(reverse `T`), until char (go to character before)
 `f"char"`(reverse `F`), find char
 
-### Jumps
+## Jumps
 `<C-o>`, go to precedent cursor position (`<C-i>`, next)
 Needs a tag file index creation command like universal ctags
 `<C-]>`, jump to next tag
 `<C-t>`, go back to precedent tag
 
-### Cursor
+## Cursor
 `<C-d>`, move the cursor downward half a screen
 `<C-u>`, move the cursor upward half a screen
 `<C-e>`, move the screen downward one line
 `zt`, bring the current line near the top of the screen (`zz`, middle, `zb`, bottom)
 
-### Folds
+## Folds
 `zf{motion}`, create fold
 `za`, toggle fold (`zA` recursively)
 
 
-## Change text
+# Change text
 `x`, "suppr"
 `X`, "backspace"
 `r`, replace character
@@ -71,15 +67,15 @@ Needs a tag file index creation command like universal ctags
 `<C+k "digraph-code"`, in insert mode insert digraph (:h digraph)
 `:'<,'>norm(al)`, apply normal command on selection
 `gc{motion | c}`, comment toggle
-### Macros
+## Macros
 `q{key}`, record macro
 `[n]@{key}`, execute macro n times
 macros can be executed on multiple lines in visual mode
 
 
-## Search-commands
+# Search-commands
 `f (reverse F)`, find character in line
-`* (reverse #)`, select word under cursor, find next occurence
+`* (reverse )`, select word under cursor, find next occurence
 `/word[\option](? backward)`, search word
 `:%s/old/new/gc`, subsitute in whole file (%, `.` for line) and every occurence by line (g) with asking (c)
 `:<lineStart>,<lineEnd>s/\<old\>/new/[flag]`, subsitute old with new (if \<old\> return only precise word)
@@ -89,9 +85,9 @@ macros can be executed on multiple lines in visual mode
 `<C-l>`, clear higlighted text
 
 
-## Get infos
+# Get infos
 
-### Completion/help
+## Completion/help
 `"command beggining" <C-d>`, show list of commands
 `tab`, completion
 `K`, open the man on the word
@@ -100,13 +96,13 @@ macros can be executed on multiple lines in visual mode
 `<C-n>`, trigger buffer context completion
 `<C-x><C-o>`, trigger omnifunc completion (or lsp)
 
-### Characters
+## Characters
 `ga`, print ascii value of the char under the cursor
 
 
-## Multiple files edition
+# Multiple files edition
 
-### Splits
+## Splits
 `<C-w> w`, change split
 `<C-w> hjkl`, switch to split
 `<C-w> o`, close all splits but current
@@ -116,19 +112,19 @@ macros can be executed on multiple lines in visual mode
 `<C-w> |`, horizontally maximize
 `<C-w> =`, all splits at same size
 
-### Tabs
+## Tabs
 `:tabnew` or `:tabe`
 `:tabclose` or `:tabc`
 `:tabonly` or `:tabo`, close every tabs except active one
 `[nbr]gt`, go to next tab (T reverse), if nbr is specified go to tab nbr
 
-### Buffers
+## Buffers
 `:ls`, list buffers
 `:b 1`, switch to buffer 1 (`sb` as a split)
 `:bd 1`, close buffer 1
 `:bn`, next buffer (`bp` previous)
 
-### Netrw (file explorer)
+## Netrw (file explorer)
 `:Ex`, open file explorer
 `:Hex`, open file explorer as an horizontal split
 `:Sex`, open file explorer in file directory as an horizontal split
@@ -139,14 +135,14 @@ macros can be executed on multiple lines in visual mode
 `R`, rename
 `D`, delete file/dir
 
-### Quickfix list
+## Quickfix list
 `:cl`, show list (`esc` to close)
 `:cope[n]`, open list in a buffer
 when in list buffer: `<C-w><CR>` to jump to the error on a new window
 `grep {string} [files(eg *.c)]`, load grep results to list
 `cdo {cmd}`, execute a command on each quickfix elements (one by one -> confirmation...)
 
-## Basic editing commands
+# Basic editing commands
 `:w [filename or command]`, save (in Visual mode after pressing : it it's possible to save only the selected text on a file)
 `:q`, quit or close window
 `:q!`, force quit
@@ -160,7 +156,7 @@ when in list buffer: `<C-w><CR>` to jump to the error on a new window
 
 `:set [no(disable)][inv(invert)]<options>[?(return option value)]`, set option (ic, ignore case; hl, highlight; ic, inner sentence counter...)
 
-## Terminal
+# Terminal
 `:term(inal)`, open terminal
 `<C-\><C-n>`, return to normal mode
 `<C-d>`, exit and close terminal window
