@@ -1,4 +1,9 @@
 ##########
+# SOURCE #
+##########
+source ~/.profile
+
+##########
 # PROMPT #
 ##########
 # Set up the prompt with static repo infos
