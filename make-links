@@ -1,0 +1,43 @@
+#!/bin/bash
+
+
+cdir=${PWD##*/}
+if [[ $cdir != 42_config ]]; then
+	echo 'In $cdir'
+	echo 'This script must be executed into the config dir "42_config"'
+	exit
+fi
+
+if [[ -z $1 ]]; then
+	echo "The link name (where to put the link) must be given as argument"
+	exit
+fi
+
+FILES_HOME=(
+	'vimrc'
+	'zshrc'
+	'tmux.conf'
+	'wezterm.lua'
+)
+FILES_HOME_CONFIG=(
+	'nvim'
+	'terminator'
+	'alacritty'
+	'gdb'
+)
+
+ln -sf ${PWD}/"{$FILES_HOME_CONFIG[3]}" $1/.config/gdb
+
+echo "CREATE LINKS IN HOME"
+for i in "${FILES_HOME[@]}"; do
+	ln -sf ${PWD}/$i $1/.$i
+	echo -n "linked: ${PWD}/$i"
+	echo "	to -> $1/.$i"
+done
+
+echo "CREATE LINKS IN HOME/.CONFIG"
+for i in "${FILES_HOME_CONFIG[@]}"; do
+	ln -sf ${PWD}/$i $1/.config/$i
+	echo -n "linked: ${PWD}/.config/$i"
+	echo "	to -> $1/.config/$i"
+done
