@@ -13,6 +13,7 @@ vim.opt.scrolloff = 5
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.showbreak = '󰘍 '
 -- Set tabulation length to 4 !! induce autoindent bugs
