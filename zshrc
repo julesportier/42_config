@@ -88,7 +88,7 @@ alias van='man --pager="nvim +Man!"'
 
 # git aliases
 # 	status
-alias gs='git status'
+alias gs='git status --untracked-files=all'
 alias gss='git status --short'
 alias gsv='git status --untracked-files=all -vv'
 #	log & diff
