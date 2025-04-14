@@ -51,6 +51,11 @@ vim.g.maplocalleader = ' '
 -- Clear highlights on search when pressing <Esc> in normal mode.
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- Switch pane focus
+vim.keymap.set('n', '<leader>l', '<C-w><C-l>')
+vim.keymap.set('n', '<leader>h', '<C-w><C-h>')
+vim.keymap.set('n', '<leader>j', '<C-w><C-j>')
+vim.keymap.set('n', '<leader>k', '<C-w><C-k>')
 
 
 -------------
