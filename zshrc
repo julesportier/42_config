@@ -110,7 +110,7 @@ alias gc='git commit -v'
 alias gca='git commit --amend -v'
 
 # c aliases
-alias grind='valgrind --leak-check=full --show-leak-kinds=all --track-fds=yes -s'
+alias grind='valgrind --leak-check=full --show-leak-kinds=all --track-fds=yes --trace-children=yes'
 alias norm='watch -n 1 norminette'
 
 # 42
