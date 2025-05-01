@@ -17,6 +17,9 @@ dpkg -x wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb $HOME/.local/share/wezt
 ./nvim-linux-x86_64.appimage --appimage-extract
 ./squashfs-root/usr/bin/nvim
 ```
+## install ceedling gem
+`ruby gem --user-install ceedling`
+add ruby gem dir to path (in ~/.profile for example): `PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin`
 
 ## add conpiled programs to PATH
 - check that ~/bin is in PATH
