@@ -11,7 +11,9 @@
 `a`, insert after cursor
 `A`, append to line end
 `o`, insert on a newline below (`O` above)
-
+## Insert to Normal
+`<C-[>`, as `esc` (in replace mode too)
+`<C-c>`, as `esc` (but don't check abbreviations and don't trigger InsertLeave command)
 
 # Motions
 
@@ -55,11 +57,12 @@ Needs a tag file index creation command like universal ctags
 `:m number`, move line up or down (+- for relative movement)
 `.`, repeat last edit at cursor position
 `c<operator>`, change word, go to insert mode (works the same as d)
-`d<operator>`, cut/delete (dw delete first word, d$ delete end of line...)
+`d<operator>`, cut/delete (dw delete first word, `d$` delete end of line...)
 `dd`, delete whole line
 `di[w]`, delete inside the object specified (here word)
 `y<operator>`, yank (copy)
 `yy`, copy full line
+`Y`, yank to end of line (as `y$`)
 `"+<operator>`, access system clipboard
 `p`, put (paste) (whole lines go on the line below the cursor, P before)
 `:r <filename or command>`, read/retrieve file content below cursor
@@ -67,6 +70,13 @@ Needs a tag file index creation command like universal ctags
 `<C+k "digraph-code"`, in insert mode insert digraph (:h digraph)
 `:'<,'>norm(al)`, apply normal command on selection
 `gc{motion | c}`, comment toggle
+
+## In insert mode
+`<C-w>`, delete the word before the cursor
+`<C-u>`, delete all charactershelp nvim before cursor
+`<C-r> register`, like `p" register` in normal mode
+`<C-t>`, augment indent (`d` reduce  indent)
+`<A-operator>`, behave like in normal mode for the operator
 ## Macros
 `q{key}`, record macro
 `[n]@{key}`, execute macro n times
@@ -93,6 +103,8 @@ macros can be executed on multiple lines in visual mode
 `K`, open the man on the word
 `:help user-manual`, a lot of things here
 `gO`, show 'document symbol' e.g. table of content
+> Watch 0.11 for lsp completion changes
+
 `<C-n>`, trigger buffer context completion
 `<C-x><C-o>`, trigger omnifunc completion (or lsp)
 
