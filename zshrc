@@ -1,7 +1,28 @@
 ##########
 # SOURCE #
 ##########
-source ~/.profile
+#source ~/.profile
+
+########
+# PATH #
+########
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+##########
+# CDPATH #
+##########
+export CDPATH=$HOME
+# For my computer
+export CDPATH=$CDPATH:$HOME/Repositories:$HOME/Repositories/projets_42
+export CDPATH=$CDPATH:$HOME/Music
+# For 42
+export CDPATH=$CDPATH:$HOME/Documents
 
 ##########
 # PROMPT #
@@ -83,7 +104,7 @@ alias ll='ls -l --color=auto'
 alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
-export MANPAGER='less -R --use-color -Dd+g -Du+y'
+export MANPAGER='less -R --use-color -Dd+g -Du+c'
 alias van='man --pager="nvim +Man!"'
 
 # git aliases
