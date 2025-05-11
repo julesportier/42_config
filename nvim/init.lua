@@ -65,6 +65,7 @@ require("config.lazy")
 -- Should set colorsheme after config.
 vim.cmd.colorscheme "catppuccin"
 require("keymaps.scnvim")
+require("keymaps.mini-files")
 
 
 ----------------
