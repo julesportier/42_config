@@ -71,6 +71,7 @@ require("keymaps.mini-files")
 ----------------
 -- LSP CONFIG --
 ----------------
+require("lsp.clangd")
 vim.opt.signcolumn = 'yes'
 vim.diagnostic.config({
 	virtual_text = false
